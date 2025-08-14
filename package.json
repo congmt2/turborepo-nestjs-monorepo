@@ -1,0 +1,30 @@
+{
+  "name": "turborepo-nestjs-monorepo",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Full-stack monorepo with NestJS backend, React frontend, and shared packages using Turborepo",
+  "keywords": ["turborepo", "monorepo", "nestjs", "react", "typescript"],
+  "scripts": {
+    "build": "turbo build",
+    "dev": "turbo dev",
+    "lint": "turbo lint",
+    "test": "turbo test",
+    "clean": "turbo clean",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\""
+  },
+  "devDependencies": {
+    "@turbo/gen": "^1.10.7",
+    "eslint": "^8.48.0",
+    "prettier": "^3.0.0",
+    "turbo": "latest",
+    "typescript": "^5.2.0"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "packageManager": "npm@9.8.0",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ]
+}
